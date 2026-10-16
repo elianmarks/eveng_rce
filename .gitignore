@@ -1,0 +1,6 @@
+debs/*
+!debs/.gitkeep
+__pycache__/
+*.pyc
+*.swp
+.DS_Store

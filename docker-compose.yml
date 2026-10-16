@@ -1,0 +1,17 @@
+services:
+  eve-ng:
+    build: .
+    image: eve-ng-ce:6.2.0-4
+    platform: linux/amd64
+    container_name: eve-ng-ce
+    hostname: eve-ng
+    privileged: true
+    volumes:
+      - eve-mysql:/var/lib/mysql
+      - eve-labs:/opt/unetlab/labs
+    ports:
+      - "127.0.0.1:8081:80"
+
+volumes:
+  eve-mysql:
+  eve-labs:
